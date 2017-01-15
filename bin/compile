@@ -17,16 +17,18 @@ PROFILE_D_DIR=$BUILD_DIR/.profile.d
 BASIC_FILENAME=instantclient-basic-linux.x64-12.1.0.2.0.zip
 SDK_FILENAME=instantclient-sdk-linux.x64-12.1.0.2.0.zip
 
-MIRROR=http://michaelbuhler.com
+MIRRORbasic=http://nodeuat.flyin.com/instantclient-basic-linux.x64-12.1.0.2.0.zip
+
+MIRRORsdk=http://nodeuat.flyin.com/instantclient-sdk-linux.x64-12.1.0.2.0.zip
 
 if [ ! -f $CACHE_DIR/$BASIC_FILENAME ]; then
     indent "Downloading $BASIC_FILENAME..."
-    wget http://nodeuat.flyin.com/instantclient-sdk-linux.x64-12.1.0.2.0.zip
+    wget http://nodeuat.flyin.com/instantclient-basic-linux.x64-12.1.0.2.0.zip
 fi
 
 if [ ! -f $CACHE_DIR/$SDK_FILENAME ]; then
     indent "Downloading $SDK_FILENAME..."
-    wget http://nodeuat.flyin.com/instantclient-basic-linux.x64-12.1.0.2.0.zip
+    wget http://nodeuat.flyin.com/instantclient-sdk-linux.x64-12.1.0.2.0.zip
 fi
 
 mkdir -p $ORACLE_DIR
