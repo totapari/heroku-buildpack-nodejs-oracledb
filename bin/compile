@@ -23,12 +23,12 @@ MIRRORsdk=http://nodeuat.flyin.com/instantclient-sdk-linux.x64-12.1.0.2.0.zip
 
 if [ ! -f $CACHE_DIR/$BASIC_FILENAME ]; then
     indent "Downloading $BASIC_FILENAME..."
-    wget http://nodeuat.flyin.com/instantclient-basic-linux.x64-12.1.0.2.0.zip
+    curl -# -o $CACHE_DIR/$BASIC_FILENAME $MIRRORbasic/$BASIC_FILENAME
 fi
 
 if [ ! -f $CACHE_DIR/$SDK_FILENAME ]; then
     indent "Downloading $SDK_FILENAME..."
-    wget http://nodeuat.flyin.com/instantclient-sdk-linux.x64-12.1.0.2.0.zip
+    curl -# -o $CACHE_DIR/$SDK_FILENAME $MIRRORsdk/$SDK_FILENAME
 fi
 
 mkdir -p $ORACLE_DIR
